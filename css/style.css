@@ -1,0 +1,295 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    background-color: #333;
+}
+/**********************************************/
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 7%;
+}
+nav .logo{
+    display: flex;
+    text-align: center;
+}
+nav .logo a{
+    text-decoration: none;
+    font-size: 35px;
+    color: #fff;
+    letter-spacing: 1px;
+    font-weight: bolder;
+}
+nav .logo a span{
+    color: red;
+}
+nav ul{
+    display: flex;
+}
+nav ul li{
+    list-style: none;
+}
+nav ul li .navbar-text{
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    font-size: px;
+    padding: 15px;
+    letter-spacing: 1px;
+    font-weight: bolder;
+    transition: 0.8s;
+}
+nav ul li .navbar-text:hover{
+    background-color: #555;
+    color: red;
+    transition: 0.8s;
+}
+nav .hamburger{
+    display: none;
+    cursor: pointer;
+}
+nav .bar{
+    display: block;
+    width: 30px;
+    height: 3px;
+    border-radius: 2px;
+    margin: 5px auto;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+/**********************************************/
+@media (max-width:768px){
+    nav .hamburger{
+        display: block;
+    }
+    nav .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    nav .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    nav .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    nav{
+        padding: 7px 7%;
+    }
+    nav ul{
+        position: fixed;
+        left: -100%;
+        top: 50px;
+        gap: 0;
+        border-radius: 0 0 20px 20px;
+        background-color: #333;
+        text-align: center;
+        flex-direction: column;
+        width: 100%;
+        transition: 0.3s;
+    }
+    nav ul li .navbar-text{
+        margin: 5px 0;
+        font-size: 20px;
+    }
+    nav ul.active{
+        left: 0;
+    }
+}
+/**********************************************/
+main{
+   display: flex;
+   width: 100%;
+   height: 100vh;
+   justify-content: center;
+   align-items: center;
+   background-color: #c0c0c0;
+}
+
+.container-form{
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .212);
+}
+.form-image{
+    width: 50%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    background-color:#A9A9A9;
+    padding: 1rem;
+}
+.form-image img{
+    width: 37rem;
+}
+.form{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 3rem;
+    background-color: #c0c0c0;
+}
+.form-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.login-button{
+    display: flex;
+    align-items: center;
+}
+.login-button button{
+    border: none;
+    background-color: #333;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.login-button button:hover{
+    background-color: #555;
+}
+.login-button button a{
+    text-decoration: none;
+    font-size: 15px;
+    color: #fff;
+}
+.input-group{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+.input-box{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.1rem;
+}
+.input-box input{
+    margin: 9px 0px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #0000001c;
+}
+.input-box input:hover{
+    background-color: #eeeeee75;
+}
+.input-box input:focus-visible{
+    outline: 1px solid #c0c0c0;
+}
+.input-box label, .gender-title h6{
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #000000c0;
+}
+.input-box input:placeholder{
+    color: #000000be;
+}
+.gender-group{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 7px;
+    padding: 2px 5px;
+}
+.gender-input{
+    display: flex;
+    align-items: center;
+}
+.gender-input input{
+    margin-right: 4px;
+}
+.gender-input label{
+    font-size: 13px;
+    font-weight: 600;
+    color: #000000c0;
+}
+.confirm-button button{
+    width: 100%;
+    margin-top: 20px;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #333;
+}
+.confirm-button button a{
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+}
+.confirm-button button:hover{
+    background-color: #555;
+}
+/**********************************************/
+@media (max-width: 1330px){
+    .form-image{
+        display: none;
+    }
+    .container-form{
+        width: 50%;
+    }
+    .form{
+        width: 100%;
+    }
+}
+@media (max-width: 1064px){
+    .container-form{
+        width: 90%;
+        height: auto;
+    }
+}
+@media (max-width: 600px){
+    .input-box{
+        margin-bottom: 5px;
+    }
+    .input-group{
+        padding: 5px 0;
+    }
+    .container-form{
+        width: 100%;
+        height: 100%;
+        box-shadow: none;
+    }
+    .gender-group{
+        flex-direction: column;
+        margin-top: 5px;
+    }
+    .gender-input{
+        padding: 3px;
+    }
+}
+@media (max-width: 500px){
+    .input-box{
+        margin-bottom: -5px;
+    }
+    .input-group{
+        padding: 5px 0;
+    }
+    .container-form{
+        width: 100%;
+        height: 100%;
+        box-shadow: none;
+    }
+    .gender-group{
+        flex-direction: column;
+        margin-top: 5px;
+    }
+    .gender-input{
+        padding: 3px;
+    }
+    .input-box input{
+        padding: 10px 80px;
+    }
+    .input-box input :placeholder{
+        padding: 0;
+    }
+
+}
+/**********************************************/
